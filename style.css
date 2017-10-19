@@ -1,0 +1,85 @@
+/*
+Theme Name: kPopN Newspaper Child
+Template: Newspaper
+*/
+
+/*
+.td-mega-span h3,
+.header-search-wrap .result-msg,
+cite,
+h6, input[type=submit],
+.comment-content blockquote p,
+.more-link-wrap,
+.td_module_18 .td-post-category,
+.td-theme-slider .slide-meta-cat a,
+.block-title,
+.td-subcat-filter .td-subcat-list .td-subcat-item,
+.td-subcat-filter .td-subcat-list a,
+.td-subcat-filter .td-subcat-dropdown a,
+.td-subcat-filter .td-subcat-dropdown a:hover,
+.td-subcat-filter .td-subcat-dropdown li,
+.td-subcat-filter .td-subcat-dropdown span,
+.td-trending-now-title,
+.td_quote_on_blocks,
+.td-menu-blocks-custom ul li a,
+.td-list-menu-inline ul li a,
+.td-tab-blocks-custom ul.wpb_tabs_nav li a,
+.td-custom-menu-blocks .td-custom-menu-list,
+.td-big-grid-post .td-post-category,
+.td_block_template_12 .td-pulldown-category,
+.td_block_template_13 .td-pulldown-category,
+.td-post-next-prev-content,
+.td-post-next-prev-content span,
+.td_block_related_posts .td-module-title,
+.td-related-title,
+.td-author-counters,
+.td-404-title,
+.td-404-sub-title,
+.td-category-header .td-pulldown-filter-display-option,
+.widget_recent_entries li,
+.widget_rss li .rsswidget,
+.td-live-theme-demos,
+.td-live-theme-demos-old .td-skin-header,
+.wpb_heading,
+.vc_toggle_title h4,
+.wpb_tabs li a,
+.vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container .vc_tta-tab > a,
+.wpb_tour .wpb_tabs_nav li a,
+.wpb_accordion .wpb_accordion_header a,
+.widgettitle,
+.td-smart-list-button,
+.td-smart-list-dropdown-wrap .td-smart-list-dropdown,
+.td_smart_list_5 .td-sml-current-item-nr,
+.td-weather-header,
+.td-weather-temperature,
+.td-weather-information,
+.td-weather-week,
+.td_block_exchange {
+	font-family: Helvetica, "Microsoft JhengHei", Arial, sans-serif;
+	color: red!important;
+}
+*/
+a.td-social-sharing-buttons.td-social-weibo {
+    margin-right: 0px !important;
+}
+
+.share_line {
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+}
+
+a.td-social-pinterest{
+    display: none !important;
+}
+
+a.td-social-whatsapp {
+    display: none !important;
+}
+
+.td-post-sharing-bottom .td-social-sharing-buttons{
+    height: 40px !important;
+}
+
+.post_socail_share {
+    width: 60px !important;
+}

@@ -43,9 +43,9 @@ class td_module_single extends td_module_single_base {
 				$td_pinterest_share_description = htmlspecialchars(urlencode(html_entity_decode($this->title, ENT_COMPAT, 'UTF-8')), ENT_COMPAT, 'UTF-8');
 			}
 			if(wp_is_mobile()){
-				$shareine = '<a class="td-social-sharing-buttons td-social-weibo" href="http://line.me/R/msg/text/?'.htmlspecialchars(urlencode(html_entity_decode($this->title, ENT_COMPAT, 'UTF-8')), ENT_COMPAT, 'UTF-8') . '%20-%20' .  esc_url( get_permalink() )  . '" ><img class="td-weibo-image" src="'.get_stylesheet_directory_uri().'/images/line2-25x25.png"></img></a>';
+				$shareine = '<a class="td-social-sharing-buttons td-social-share-line" href="http://line.me/R/msg/text/?'.htmlspecialchars(urlencode(html_entity_decode($this->title, ENT_COMPAT, 'UTF-8')), ENT_COMPAT, 'UTF-8') . '%20-%20' .  esc_url( get_permalink() )  . '" ><img  src="'.get_stylesheet_directory_uri().'/images/line2-25x25.png"></img></a>';
 			}else{
-				$shareine = '<a class="td-social-sharing-buttons td-social-weibo" href="https://lineit.line.me/share/ui?url=' . esc_url(  get_permalink() )  . '" onclick="window.open(this.href, \'mywin\',\'left=50,top=50,width=600,height=350,toolbar=0\'); return false;"><img class="td-weibo-image" src="'.get_stylesheet_directory_uri().'/images/line2-25x25.png"></img></a>';
+				$shareine = '<a class="td-social-sharing-buttons td-social-share-line" href="https://lineit.line.me/share/ui?url=' . esc_url(  get_permalink() )  . '" onclick="window.open(this.href, \'mywin\',\'left=50,top=50,width=600,height=350,toolbar=0\'); return false;"><img  src="'.get_stylesheet_directory_uri().'/images/line2-25x25.png"></img></a>';
 			}
 
 			$buffy .= '
@@ -117,9 +117,9 @@ class td_module_single extends td_module_single_base {
 				$td_pinterest_share_description = htmlspecialchars(urlencode(html_entity_decode($this->title, ENT_COMPAT, 'UTF-8')), ENT_COMPAT, 'UTF-8');
 			}
 			if(wp_is_mobile()){
-				$shareine = '<a class="td-social-sharing-buttons td-social-weibo" href="http://line.me/R/msg/text/?'.htmlspecialchars(urlencode(html_entity_decode($this->title, ENT_COMPAT, 'UTF-8')), ENT_COMPAT, 'UTF-8') . '%20-%20' .  esc_url( get_permalink() )  . '" ><img class="td-weibo-image" src="'.get_stylesheet_directory_uri().'/images/line2-25x25.png"></img></a>';
+				$shareine = '<a class="td-social-sharing-buttons td-social-share-line" href="http://line.me/R/msg/text/?'.htmlspecialchars(urlencode(html_entity_decode($this->title, ENT_COMPAT, 'UTF-8')), ENT_COMPAT, 'UTF-8') . '%20-%20' .  esc_url( get_permalink() )  . '" ><img  src="'.get_stylesheet_directory_uri().'/images/line2-25x25.png"></img></a>';
 			}else{
-				$shareine = '<a class="td-social-sharing-buttons td-social-weibo" href="https://lineit.line.me/share/ui?url=' . esc_url(  get_permalink() )  . '" onclick="window.open(this.href, \'mywin\',\'left=50,top=50,width=600,height=350,toolbar=0\'); return false;"><img class="td-weibo-image" src="'.get_stylesheet_directory_uri().'/images/line2-25x25.png"></img></a>';
+				$shareine = '<a class="td-social-sharing-buttons td-social-share-line" href="https://lineit.line.me/share/ui?url=' . esc_url(  get_permalink() )  . '" onclick="window.open(this.href, \'mywin\',\'left=50,top=50,width=600,height=350,toolbar=0\'); return false;"><img  src="'.get_stylesheet_directory_uri().'/images/line2-25x25.png"></img></a>';
 			}
 			//default share buttons
 			$buffy .= '

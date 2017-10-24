@@ -59,7 +59,7 @@ h6, input[type=submit],
 	color: red!important;
 }
 */
-a.td-social-sharing-buttons.td-social-weibo {
+a.td-social-sharing-buttons.td-social-share-line {
     margin-right: 0px !important;
 }
 
@@ -82,4 +82,27 @@ a.td-social-whatsapp {
 
 .post_socail_share {
     width: 60px !important;
+}
+
+
+.footer-social-wrap .td-social-icon-wrap {
+    vertical-align: -webkit-baseline-middle;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+}
+.td-icon-weibo:before{
+    content: url('./images/weibo.png');
+    opacity: 0;
+}
+.td-icon-weibo {
+    background: url('./images/weibo.png') no-repeat;
+}
+
+.td-icon-weibo {
+    background-position: 2px 2px;
+    background-size: 29px;
+}
+.td-icon-weibo:hover {
+    background-position: 2px -30px;
 }

@@ -7,8 +7,15 @@ add_action('wp_enqueue_scripts', function() {
 
 });
 
+show_admin_bar( false );
+
 add_action('init','register_social_network' );
 function register_social_network(){
 	//Weibo follow link add in footer
 	td_social_icons::$td_social_icons_array['weibo'] = 'Weibo';
 };
+
+
+
+
+

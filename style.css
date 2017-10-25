@@ -100,13 +100,19 @@ a.td-social-whatsapp {
 }
 
 .td-icon-weibo {
-    background-position: 2px 2px;
-    background-size: 29px;
+      background-position: 50% -25%;
+      background-size: 75%;
 }
 .td-icon-weibo:hover {
-    background-position: 2px -30px;
+    background-position: 50% 142%;
 }
 
 .td-header-sp-top-widget i.td-icon-font.td-icon-weibo {
     margin-top: -10px;
+    background-size: 95%;
+    background-position: 50% -8%;
+}
+
+.td-header-sp-top-widget i.td-icon-font.td-icon-weibo:hover{
+    background-position: 2px -30px;
 }

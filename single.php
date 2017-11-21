@@ -35,6 +35,7 @@ $td_mod_single = new td_module_single($post);
                         <div class="td-pb-span4 td-main-sidebar" role="complementary">
                             <div class="td-ss-main-sidebar">
                                 <?php get_sidebar(); ?>
+                                <?php do_action('place_ad_sidebar'); ?>
                             </div>
                         </div>
                     <?php
@@ -53,6 +54,7 @@ $td_mod_single = new td_module_single($post);
 		                <div class="td-pb-span4 td-main-sidebar" role="complementary">
 			                <div class="td-ss-main-sidebar">
 				                <?php get_sidebar(); ?>
+                                <?php do_action('place_ad_sidebar'); ?>
 			                </div>
 		                </div>
                     <?php
@@ -80,4 +82,6 @@ $td_mod_single = new td_module_single($post);
 
 <?php
 
+do_action("place_ad_fixed_bottom");
+do_action("place_ad_fixed_overlay");
 get_footer();

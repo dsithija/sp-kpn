@@ -37,3 +37,8 @@ function place_add_above_title() {
 			?> </div> <?php
 	}
 }
+/*
+ * Register custom ad slots
+ */
+require_once plugin_dir_path(__FILE__).'includes/CustomAdSlots.php';
+CustomAdSlots::init();

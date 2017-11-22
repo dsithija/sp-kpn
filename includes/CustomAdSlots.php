@@ -48,30 +48,29 @@ class CustomAdSlots
             return;
 
         $target = is_home() ? "home" : (is_single() ? "article" : "unknown");
-        $device_type = wp_is_mobile() ? "mobile" : "desktop";
 
         global $wpdb;
         $table = $wpdb->prefix."custom_ad_slots";
-        $result = $wpdb->get_row( "SELECT * FROM $table WHERE action_name = '$action_name' and device_type = '$device_type' and target_page='$target'" );
+        $result = $wpdb->get_row( "SELECT * FROM $table WHERE action_name = '$action_name' and target_page='$target'" );
 
         if(!empty($result) && !empty($result->content)){
+            $mask = $result->has_close ? "custom_ad_slot_mask" : "";
             ?>
-            <div class="custom_ad_slot_container <?php echo $result->class_name; ?>">
-            <?php if(!empty($result->title)){ ?>
-                <span class="custom_ad_slot_title"><?php echo $result->title; ?></span>
-            <?php }?>
-            <?php if($result->has_close){ ?>
-                <div class="custom_ad_slot_close">
-                    <svg viewbox="0 0 40 40">
-                        <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
-                    </svg>
+            <div class="custom_ad_slot_container hide_ad <?php echo $mask." ".$result->class_name." custom_ad_slot_".$result->device_type; ?>">
+                <div class="custom_ad_slot_inner_container">
+                    <?php if(!empty($result->title)){ ?>
+                        <span class="custom_ad_slot_title"><?php echo $result->title; ?></span>
+                    <?php }?>
+                    <?php if($result->has_close){ ?>
+                        <div class="custom_ad_slot_close">
+                            <svg viewbox="0 0 40 40">
+                                <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
+                            </svg>
+                        </div>
+                    <?php } ?>
+                    <?php echo $result->content; ?>
                 </div>
-            <?php } ?>
-            <?php echo $result->content; ?>
             </div>
-            <?php if($result->has_close){ ?>
-                <div class="custom_ad_slot_mask"></div>
-            <?php } ?>
             <?php
         }
     }

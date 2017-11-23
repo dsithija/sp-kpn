@@ -58,7 +58,7 @@ class CustomAdSlots
             $close_margin = $result->width/2 - 20;
             ?>
             <div class="custom_ad_slot_container hide_ad <?php echo $mask." ".$result->class_name." custom_ad_slot_".$result->device_type; ?>">
-                <div class="custom_ad_slot_inner_container" style="height:<?php echo $result->height; ?>px">
+                <div class="custom_ad_slot_inner_container" style="height:<?php echo (empty($result->height) ? "auto" : $result->height."px"); ?>">
                     <?php if(!empty($result->title) && !$result->has_close){ ?>
                         <span class="custom_ad_slot_title"><?php echo $result->title; ?></span>
                     <?php }?>

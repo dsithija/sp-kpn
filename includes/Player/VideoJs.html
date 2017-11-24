@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IVS Player</title>
+    <script type="text/javascript" src="https://player.ivideosmart.com/ivideostream/ivstreamplay_v1.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="playerWrapper" style="position:relative;width:100%;display:inline-block;padding:0;margin-bottom:0">
+    <div id="dummy" style="padding-top: 56.25%;"></div>
+    <div class="playerContainer" id="ivideostreamplayer"
+         style="height: 100%; width: 100%; position: absolute;top:0;max-height: 100%"></div>
+</div>
+
+<script>
+    var play = function (src, videoId, title, vastUrl, cpId, spId, spType, href) {
+        window.ivstreamplay({
+            container: "ivideostreamplayer",
+            settings: {
+                videoSrc: src,
+                videoId: videoId,
+                title: title,
+                vastUrl: vastUrl,
+                cpId: cpId,
+                spId: spId,
+                spType: spType,
+                refUrl: href
+            },
+            onReady: function (player) {
+                // Refer to the document for events and triggers.
+            }
+        });
+    };
+</script>
+</body>
+</html>

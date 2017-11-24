@@ -42,3 +42,40 @@ function place_add_above_title() {
  */
 require_once plugin_dir_path(__FILE__).'includes/CustomAdSlots.php';
 CustomAdSlots::init();
+
+function get_video_content_owner($entryId) {
+    global $wpdb;
+
+    /*
+     * From $entryId, we will look for the record in wp_postmeta where meta_key = $entryId
+     * Note that meta_key in uniquely indexed, so there can only be one record in which meta_key = $entryId
+     */
+    $rows = $wpdb->get_results("select * from wp_postmeta where meta_key = 'entry_id' and meta_value = '$entryId';");
+    if (empty($rows) || !is_array($rows) || count($rows) == 0) {
+        return false;
+
+    }
+    /*
+     * Now that we have that record, we will obtain the post ID from it
+     * This post ID will be the id of the video post hosting that video with entry_id = $entryId
+     */
+    $row = $rows[0];
+    $postId = $row->post_id;
+    /*
+     * Obtain the Content Owner info of the video
+     */
+    $contentOwnerInfo = get_post_meta($postId, "td_content_owner_userid");
+    if (is_array($contentOwnerInfo)) {
+        if (count($contentOwnerInfo) > 0) {
+            return $contentOwnerInfo[0];
+        } else {
+            return;
+        }
+    }
+    return $contentOwnerInfo;
+}
+
+class RequestController{
+    const AndroidRequestHeader = "com.asianmedia.sp2";
+    const iOSRequestHeader = "com.asianmedia.ios";
+}
